@@ -26,6 +26,7 @@ const Form = props => {
     return (
         <div>
             <div>
+                <h3>Add a Smurf to your Village Here!</h3>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"

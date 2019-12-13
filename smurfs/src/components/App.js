@@ -22,7 +22,7 @@ class App extends Component {
             height={smurf.height}
           />
         ))}
-        <button onClick={this.props.getSmurf}>Get Smurfs</button>
+        <button onClick={this.props.getSmurf}>Click hereto see your village!</button>
       </div>
     );
   }
