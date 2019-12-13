@@ -14,7 +14,7 @@ export const getSmurf = () => dispatch => {
             dispatch({ type: GETTING_SMURFS_SUCCESS, payload: res.data });
         })
         .catch(err => {
-            dispatch({ type: CREATING_SMURF_SUCCESS, payload: err.response });
+            dispatch({ type: SMURF_ERROR, payload: err.response });
         })
 }
 
