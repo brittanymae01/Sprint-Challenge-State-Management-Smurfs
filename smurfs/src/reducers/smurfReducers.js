@@ -10,21 +10,40 @@ const initialState = {
     smurfs: [],
     fetchingSmurfs: false,
     addingSmurfs: false,
-    error: 'null'
+    error: ''
 }
 
 const smurfsReducer = (state = initialState, action) => {
     switch (action.type) {
         case GETTING_SMURFS_START:
-            return { ...state, fetchingSmurfs: true }
+            return {
+                ...state,
+                fetchingSmurfs: true
+            }
         case GETTING_SMURFS_SUCCESS:
-            return { ...state, smurfs: action.payload, fetchingSmurfs: false }
+            return {
+                ...state,
+                smurfs: action.payload,
+                fetchingSmurfs: false,
+                error: ''
+            }
         case CREATING_SMURF_START:
-            return { ...state, addingSmurfs: true }
+            return {
+                ...state,
+                addingSmurfs: true
+            }
         case CREATING_SMURF_SUCCESS:
-            return { ...state, smurfs: action.payload, addingSmurfs: false }
+            return {
+                ...state,
+                smurfs: action.payload,
+                addingSmurfs: false,
+                error: ''
+            }
         case SMURF_ERROR:
-            return { ...state, error: action.error }
+            return {
+                ...state,
+                error: action.error
+            }
         default: return state
     }
 }

@@ -12,16 +12,17 @@ class App extends Component {
         <h1>SMURFS! 2.0 W/ Redux</h1>
         <Form />
         <div className='cards'>
-          {this.props.smurfs.map(smurf => (
+          {this.props.fetchingSmurfs && <p>Fetching Smurfs...</p>}
+          {!this.props.fetchingSmurfs && (this.props.smurfs.map(smurf => (
             <Smurf
               key={smurf.id}
               name={smurf.name}
               age={smurf.age}
               height={smurf.height}
             />
-          ))}
+          )))}
         </div>
-        <button className='village-button' onClick={this.props.getSmurf}>Click hereto see your village!</button>
+        <button className='village-button' onClick={this.props.getSmurf}>Click here to see your village!</button>
       </div>
     );
   }

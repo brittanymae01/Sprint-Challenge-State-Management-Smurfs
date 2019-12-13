@@ -11,7 +11,6 @@ const Form = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(smurf)
 
         props.addSmurf(smurf);
 
@@ -26,7 +25,7 @@ const Form = props => {
     return (
         <div>
             <div>
-                <h3>Add a Smurf to your Village Here!</h3>
+                <h3>Add a Smurf to your Village!</h3>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
